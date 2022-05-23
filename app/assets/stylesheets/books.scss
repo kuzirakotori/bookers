@@ -1,0 +1,98 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  margin:33px;
+  font-size:13px;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: black; 
+  text-decoration: underline;
+}
+
+thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+th{
+  padding-bottom:5px;
+  font-size:13px;
+}
+
+tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+td{
+  padding:1px 5px 7px 5px;
+  font-size:13px;
+}
+
+h2{
+  margin:16px 0px;
+  font-weight: bold;
+  font-size:20px;
+}
+
+input,textarea{
+  display:block;
+}
+
+.field,.actions{
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  cursor: default;
+}
+
+.flash-message{
+  color:green;
+}
+
+.ellor-message{
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.ellor-title{
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.ellor-list{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.error-field{
+  padding: 2px;
+  background-color: red;
+  display: inline-block;
+}

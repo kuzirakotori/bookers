@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="books.scss">
+    <title>show</title>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="flash-message"><p> <%= notice%> </p></div>
+    <% end %>  
+    
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= @book.body %>
+    </p>
+    <%= link_to "Edit",edit_book_path(@book.id),class:"link" %> | <%= link_to"Back",books_path,class:"link" %>
+  </body>
+</html>
