@@ -27,21 +27,34 @@
             <td><%= book.body %></td>
             <td><%= link_to "Show",book_path(book.id),class:"link" %></td>
             <td><%= link_to "Edit",edit_book_path(book.id),class:"link" %></td>
-            <td><%= link_to "Destroy",destroy_list_path(@books.ids), method: :delete, data: {confirm: "削除しますか？"},class:"link" %></td>
+            <td><%= link_to "Destroy",destroy_list_path(book.id), method: :delete, data: {confirm: "削除しますか？"},class:"link" %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
 
     <h2>New book</h2>
-    
+    <%# エラー用の div 全体を if で囲うことで、エラーが無い時のレイアウト崩れを防ぐ。 %>
+    <% if @book.errors.any? %>
+      <div class="error-message">
+       <div class="error-title"><%= @book.errors.count %> errors prohibited this book from being saved:</div>
+        <ul>
+          <div class="error-list">
+            <% @book.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </div>
+        </ul>
+      </div>
+    <% end %>
+
     <%= form_with model: @book, url:books_path, method: :post do |f| %>
       <div class="field">
-        <label for="book_title">Title</label>
+        <%= f.label :title %>
         <%= f.text_field :title %>
       </div>
       <div class="field">
-        <label for="book_body">Body</label>
+        <%= f.label :body %>
         <%= f.text_area :body %>
       </div>
       <div class="actions">

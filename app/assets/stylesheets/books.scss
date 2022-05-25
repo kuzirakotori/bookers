@@ -9,7 +9,7 @@ body{
 
 .link {
   text-decoration: none;
-  color: black; 
+  color: black;
   text-decoration: underline;
 }
 
@@ -58,7 +58,7 @@ label{
   color:green;
 }
 
-.ellor-message{
+.error-message{
   width: 450px;
   border: 2px solid red;
   padding: 7px;
@@ -67,7 +67,7 @@ label{
   background-color: #f0f0f0;
 }
 
-.ellor-title{
+.error-title{
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
@@ -78,7 +78,7 @@ label{
   color: #fff;
 }
 
-.ellor-list{
+.error-list{
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 12px;
   line-height: 18px;
